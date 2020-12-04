@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap");
+
+:root {
+  --boardSize: 33vw;
+  --gray: #656c97;
+  --pink: #f788df;
+  --yellow: #e4f0a8;
+  --blue: #88f7ce;
+  --accents: #ed8145;
+}
+
+body {
+  background-color: #ed80455e;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 1500;
+  color: var(--gray);
+  text-shadow: 2px 2px 0px #fc5185;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+}
+#gameBoard {
+  margin: auto;
+  width: var(--boardSize);
+  height: var(--boardSize);
+  display: grid;
+  grid-template-columns: repeat(3, var(--boardSize) / 3);
+  grid-template-rows: repeat(3, var(--boardSize) / 3);
+  grid-template-areas:
+    "zero one two"
+    "three four five"
+    "six seven eigth";
+  gap: 10px;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eigth {
+  grid-area: eigth;
+}
+
+.boardPanel {
+  background-color: var(--blue);
+  line-height: calc(var(--boardSize) / 3);
+  text-align: center;
+  font-size: 3em;
+  height: calc(var(--boardSize) / 3);
+  width: calc(var(--boardSize) / 3);
+}
