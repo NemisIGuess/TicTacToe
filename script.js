@@ -77,9 +77,9 @@ const DisplayController = (function() {
 
     const displayWinner = (isThereAWinner, whichPlayerWon, gameBoard, display) => {
         if (isThereAWinner == true && whichPlayerWon == '✘') {
-            displayMessage(display, `${GameState.getPlayer1().name} won.`)
+            displayMessage(display, `🎉 ${GameState.getPlayer1().name} won. 🎉`)
         } else if (isThereAWinner == true && whichPlayerWon == 'O') {
-            displayMessage(display, `${GameState.getPlayer2().name} won.`)
+            displayMessage(display, `🎉 ${GameState.getPlayer2().name} won. 🎉`)
         } else if (isThereAWinner == false && gameBoard.indexOf('') === -1 ) {
             displayMessage(display, `Tie!`)
         }
