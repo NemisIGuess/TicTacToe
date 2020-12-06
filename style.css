@@ -11,7 +11,7 @@
   --boardSize: 33vw;
   --gray: #656c97;
   --pink: #f788df;
-  --yellow: #e4f0a8;
+  --yellow: #e4f0a8a8;
   --green: #2ecc70bd;
   --accents: #ed8145;
   --background: #ecf0f1;
@@ -24,14 +24,25 @@ body {
 h1 {
   text-align: center;
   color: var(--gray);
-  text-shadow: 2px 2px 0px var(--pink);
+  text-shadow: 1px 1px 0px black, 3px 3px 0px var(--pink), 4px 4px 0px black;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 4rem;
+  margin-bottom: 0;
 }
+
+h2 {
+  font-family: Roboto;
+  text-align: center;
+  margin: 0.3em;
+  color: var(--gray);
+  text-shadow: 1px 1px 0px black, 3px 3px 0px var(--pink), 4px 4px 0px black;
+  font-size: 2rem;
+}
+
 #gameBoard {
   margin: auto;
-  width: var(--boardSize);
-  height: var(--boardSize);
+  width: calc(var(--boardSize) + 20px);
+  height: calc(var(--boardSize) + 20px);
   display: grid;
   grid-template-columns: repeat(3, var(--boardSize) / 3);
   grid-template-rows: repeat(3, var(--boardSize) / 3);
@@ -92,4 +103,52 @@ h1 {
   width: calc(var(--boardSize) / 3);
   font-family: journal;
   font-weight: bolder;
+  border: 1px solid black;
+}
+
+#gameControl {
+  width: var(--boardSize);
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+.gameControlButton {
+  border: none;
+  background-color: var(--gray);
+  box-shadow: 3px 3px 0px var(--pink);
+  padding: 0.5em 1em;
+  caret-color: transparent;
+  color: var(--background);
+  outline: none;
+  cursor: pointer;
+  font-family: Roboto;
+  letter-spacing: 1px;
+}
+
+#selectPlayerDiv {
+  width: 30vw;
+  height: 13vh;
+  margin: 1em auto;
+  background-color: var(--gray);
+  border: 1px solid black;
+}
+
+.selecPlayerInput {
+  margin: 1em auto;
+  display: block;
+  outline: none;
+  width: 15vw;
+}
+
+#submitPlayers {
+  margin: auto;
+  display: block;
+  width: 8vw;
+  outline: none;
+}
+
+.display {
+  display: none;
 }

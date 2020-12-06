@@ -7,6 +7,17 @@
     </head>
     <body>
         <h1>Tic Tac Toe</h1>
+        <div id="gameControl">
+            <button class="gameControlButton" id="restartButton">Restart</button>
+            <button class="gameControlButton" id="playersButton">Select Players</button>
+        </div>
+        <div id="selectPlayerDiv" class="display">
+            <form id="form">
+                <input class="selecPlayerInput" id="playerOne" type="text" placeholder="Player one" required>
+                <input class="selecPlayerInput" id="playerTwo" type="text" placeholder="Player two" required>
+                <input id="submitPlayers" type="submit" form="form" value="Start">
+            </form>
+        </div>
         <div id="gameBoard">
             <div class="boardPanel" value="0" id="zero"></div>
             <div class="boardPanel" value="1" id="one"></div>
@@ -18,6 +29,7 @@
             <div class="boardPanel" value="7" id="seven"></div>
             <div class="boardPanel" value="8" id="eigth"></div>
         </div>
+        <h2 id="display">Select players</h2>
         <script src="script.js"></script>
     </body>
 </html>
